@@ -1,6 +1,17 @@
 *{
     -webkit-tap-highlight-color: transparent;
 }
+body, html {
+    touch-action: manipulation; /* Ignoruje podwójne kliknięcia jako gest powiększenia */
+}
+button, .side-btn, .sub-btn, body {
+    -webkit-touch-callout: none; /* Wyłącza menu kontekstowe na iOS (Safari) */
+    -webkit-user-select: none;   /* Wyłącza zaznaczanie tekstu */
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;           /* Wyłącza zaznaczanie na Androidzie/Chrome */
+}
 /*=====(TŁO + CZCIONKA)=====*/
 body {
     background-color: rgb(38 38 38);
