@@ -1,0 +1,201 @@
+*{
+    -webkit-tap-highlight-color: transparent;
+}
+/*=====(TŁO + CZCIONKA)=====*/
+body {
+    background-color: rgb(38 38 38);
+    color: #ffffff;
+    font-family: sans-serif;
+    user-select: none;
+    -webkit-user-select: none;
+    margin: 0;
+}
+#main-game-layout {
+    display: grid;
+    grid-template-columns: 1fr 12vw;
+    gap: 1vw;
+    height: 95vh;
+    padding: 1vw;
+    background-color: #2a2a2a;
+}
+#side-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5vh;
+    background-color: #383838;
+    padding: 1vw;
+    border-radius: 0.5vw;
+}
+.side-btn {
+    height: 8vh;
+    background-color: #555;
+    color: black;
+    font-family: sans-serif;
+    font-size: 1.8vw;
+    font-weight: bold;
+    border: 0.2vw solid #3c3c3c;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.sub-menu-bar {
+    display: flex;
+    gap: 0.5vw;
+    background-color: #383838;
+    padding: 0.8vw;
+    border-radius: 0.5vw;
+    margin-bottom: 1vh;
+}
+.sub-btn {
+    height: 7vh;
+    padding: 0 1.5vw;
+    background-color: #555;
+    color: black;
+    font-family: sans-serif;
+    font-size: 1.3vw;
+    font-weight: bold;
+    border: 0.2vw solid #3c3c3c;
+    cursor: pointer;
+    transition: 0.2s;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+@media (hover: hover) {
+    .side-btn:hover, .sub-btn:hover {
+        transform: scale(1.05);
+    }
+}
+
+.side-btn:active, .sub-btn:active {
+    background-color: #555;
+    border-color: #3c3c3c;
+    transform: scale(0.95);
+}
+.active-main {
+    background-color: #777 !important;
+    border-color: #555 !important;
+}
+.active-sub {
+    background-color: #777 !important;
+    border-color: #555 !important;
+}
+#content-area {
+    display: flex;
+    flex-direction: column;
+}
+
+#game-play-space {
+    flex-grow: 1;
+    background-color: #222;
+    border-radius: 0.5vw;
+    padding: 1vw;
+    height: 75vh;
+    overflow-y: auto;
+    box-sizing: border-box;
+}
+#game-play-space::-webkit-scrollbar {
+    width: 0.6vw;
+}
+
+#game-play-space::-webkit-scrollbar-track {
+    background: #1a1a1a;
+    border-radius: 0.5vw;
+}
+
+#game-play-space::-webkit-scrollbar-thumb {
+    background: #555;
+    border-radius: 0.5vw;
+}
+
+#game-play-space::-webkit-scrollbar-thumb:hover {
+    background: #777;
+}
+#game-play-space {
+    scrollbar-width: thin;
+    scrollbar-color: #555 #1a1a1a;
+}
+.btn-locked {
+    filter: grayscale(65%);
+}
+.hidden {
+    visibility: hidden !important;
+    pointer-events: none;
+}
+.hiddenPlus {
+    display: none !important;
+}
+.disabled-button {
+    cursor: default !important;
+    pointer-events: none !important;
+}
+#quest-container {
+    margin-left: -6.5vw;
+    position: fixed;
+    bottom: 0vh;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70vw;
+    background-color: #2b2b2b;
+    border: 0.2vw solid #3c3c3c;
+    padding: 0.8vw 1.2vw;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6vw;
+    z-index: 1000;
+    border-radius: 4px;
+}
+#quest-header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.1vw;
+    font-weight: bold;
+    color: #ffffff;
+}
+#quest-level-text {
+    color: #00ccff;
+}
+#quest-progress-bg {
+    position: relative;
+    width: 100%;
+    height: 2.8vh;
+    background-color: #444444;
+    border: 0.1vw solid #222222;
+    overflow: hidden;
+    border-radius: 2px;
+}
+#quest-progress-bar {
+    width: 0%;
+    height: 100%;
+    background-color: #0066ff;
+    transition: width 0.1s linear;
+}
+#quest-percent-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 0.9vw;
+    font-weight: bold;
+    color: #ffffff;
+    text-shadow: 0.1vw 0.1vw 0.2vw #000000;
+}
+
+.blink-notification {
+    animation: blink-animation 0.5s ease-in-out 2;
+}
+
+@keyframes blink-animation {
+    0% {
+        background-color: transparent;
+        box-shadow: none;
+    }
+    50% {
+        background-color: #ffeeb6;
+        box-shadow: 0 0 10px #ffeeb6;
+    }
+    100% {
+        background-color: transparent;
+        box-shadow: none;
+    }
+}

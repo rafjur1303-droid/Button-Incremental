@@ -1,0 +1,64 @@
+#settings-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5vw;
+    width: 14vw;
+}
+#save {
+    grid-column: span 2;
+}
+#import-input {
+    grid-column: span 2;
+    height: 6vh;
+    font-size: 2.4vw;
+    resize: none;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+#export-alert {
+    grid-column: span 2;
+    text-align: center;
+}
+#settings-container > button[onclick="resetGame()"] {
+    grid-column: span 2;
+}
+#settings-container > button[onclick="toggleQuestBar()"] {
+    grid-column: span 2;
+}
+.export-alert-hidden {
+    display: flex;
+    color: #00ffcc;
+    font-weight: bold;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    pointer-events: none;
+    margin-left: 19vw;
+    margin-top: -19vh;
+    font-size: 1.5vw;
+}
+.export-alert-visible {
+    display: flex;
+    color: #00ffcc;
+    font-weight: bold;
+    opacity: 1;
+    transition: opacity 0.2s ease;
+    margin-left: 19vw;
+    margin-top: -19vh;
+    font-size: 1.5vw;
+}
+.settings-btn{
+    background-color: #555;
+    color: black;
+    border: 0.2vw solid #3c3c3c;
+    font-size: 1.7vw;
+    height: 6vh;
+    width: 9vw;
+}
+.settings-btn-big{
+    background-color: #555;
+    color: black;
+    border: 0.2vw solid #3c3c3c;
+    font-size: 1.7vw;
+    height: 6vh;
+    width: 18.5vw;
+}
