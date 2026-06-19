@@ -431,6 +431,14 @@ function loadGame() {
         console.log("Gra wczytana!");
     }
 }
+//=====(ADMIN)=====
+function admin(){
+    money = 1000000000000000000000000000000;
+    multiplier = 1000000000000000000000000000000;
+    rebirth = 1000000000000000000000000000000;
+    superRebirth = 1000000000000000000000000000000;
+    mega = 1000000000000000000000000000000;
+}
 //=====(HARD RESET Z PODWÓJNYM POTWIERDZENIEM)=====
 function resetGame() {
     let pierwszePotwierdzenie = confirm("Are you sure you want to reset all your progress? This change is PERMANENT!");

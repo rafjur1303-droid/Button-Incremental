@@ -199,3 +199,11 @@ body {
         box-shadow: none;
     }
 }
+#admin{
+    background-color: #555;
+    border: 0.2vw solid #3c3c3c;
+    border-radius: 0.5vw;
+    height: 8vh;
+    width: 100%;
+    font-size: 1.5vw;
+}
