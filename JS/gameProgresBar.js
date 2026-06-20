@@ -1326,10 +1326,10 @@ const gameQuests = {
         desc: "Research last research",
         check: () => {
             let progress = (up12TimeIs / 100000000000) * 100; //PROGRESS
-            if (up12Lv >= 1) progress = 100;
+            if (up12Lv == "MAX") progress = 100;
             return Math.min(100, Math.max(0, progress));
         },
-        isDone: () => up12Lv >= 1
+        isDone: () => up12Lv >= "MAX"
     },
 };
 function updateQuestProgressBar() {

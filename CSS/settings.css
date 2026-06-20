@@ -10,7 +10,7 @@
 #import-input {
     grid-column: span 2;
     height: 6vh;
-    font-size: 2.4vw;
+    font-size: 2.1vw;
     resize: none;
     box-sizing: border-box;
     overflow: hidden;
@@ -50,15 +50,33 @@
     background-color: #555;
     color: black;
     border: 0.2vw solid #3c3c3c;
-    font-size: 1.7vw;
+    font-size: 1.5vw;
     height: 6vh;
     width: 9vw;
+    transition: 0.2s;
+}
+.settings-btn:hover{
+    background: #777;
+    transform: scale(1.05);
+}
+.settings-btn:active {
+    background: #555;
+    transform: scale(0.95);
 }
 .settings-btn-big{
     background-color: #555;
     color: black;
     border: 0.2vw solid #3c3c3c;
-    font-size: 1.7vw;
+    font-size: 1.5vw;
     height: 6vh;
     width: 18.5vw;
+    transition: 0.2s;
+}
+.settings-btn-big:hover{
+    background: #777;
+    transform: scale(1.05);
+}
+.settings-btn-big:active {
+    background: #555;
+    transform: scale(0.95);
 }
