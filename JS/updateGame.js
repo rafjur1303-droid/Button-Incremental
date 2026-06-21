@@ -123,7 +123,7 @@ function updateGame(){
     }
     let MEStatsInfo  = document.getElementById("me-stats-info");
     if (mega >= 1 || meStatsInfoVis == true) {
-        SRStatsVis = true;
+        meStatsInfoVis = true;
         MEStatsInfo.classList.remove("hiddenPlus");
 
     } else {
@@ -214,8 +214,8 @@ function updateGame(){
         SRStatsAlphabet.classList.add("hiddenPlus");
     }
     let MEStatsAlphabet  = document.getElementById("me-alphabet");
-    if (mega >= 1 || meStatsInfoVis == true) {
-        meStatsInfoVis = true;
+    if (mega >= 1 || MeVis == true) {
+        MeVis = true;
         MEStatsAlphabet.classList.remove("hiddenPlus");
     } else {
         MEStatsAlphabet.classList.add("hiddenPlus");
