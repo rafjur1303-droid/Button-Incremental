@@ -4,7 +4,6 @@ function updateGame(){
     if (money >= 5000 || toUpgradeVis == true ) {
         toUpgradeVis = true;
         toUpgrade.classList.remove("hidden");
-        triggerBlink(toUpgrade);
     } else {
         toUpgrade.classList.add("hidden");
     }
@@ -13,7 +12,6 @@ function updateGame(){
     if (multiplier >= 200 || up3Vis == true) {
         up3Vis = true;
         Up3.classList.remove("hidden");
-        triggerBlink(toUpgrade);
     } else {
         Up3.classList.add("hidden");
     }
@@ -22,7 +20,6 @@ function updateGame(){
     if (rebirth >= 5 || up4Vis == true) {
         up4Vis = true;
         Up4.classList.remove("hidden");
-        triggerBlink(toUpgrade);
     } else {
         Up4.classList.add("hidden");
     }
@@ -31,7 +28,6 @@ function updateGame(){
     if (rebirth >= 10 || up5Vis == true) {
         up5Vis = true;
         Up5.classList.remove("hidden");
-        triggerBlink(toUpgrade);
     } else {
         Up5.classList.add("hidden");
     }
@@ -40,7 +36,6 @@ function updateGame(){
     if (superRebirth >= 1 || up6Vis == true) {
         up6Vis = true;
         Up6.classList.remove("hidden");
-        triggerBlink(toUpgrade);
     } else {
         Up6.classList.add("hidden");
     }
@@ -49,7 +44,6 @@ function updateGame(){
     if (superRebirth >= 2 || up7Vis == true) {
         up7Vis = true;
         Up7.classList.remove("hidden");
-        triggerBlink(toUpgrade);
     } else {
         Up7.classList.add("hidden");
     }
@@ -58,16 +52,15 @@ function updateGame(){
     if (superRebirth >= 10 || up8Vis == true) {
         up8Vis = true;
         Up8.classList.remove("hidden");
-        triggerBlink(toUpgrade);
     } else {
         Up8.classList.add("hidden");
     }
 //=====(UPGRADE 9)=====
     let Up9  = document.getElementById("btn-Up-9");
-    if (superRebirth >= 50 || up9Vis == true) {
+    if (superRebirth >= 125 || up9Vis == true) {
         up9Vis = true;
         Up9.classList.remove("hidden");
-        triggerBlink(toUpgrade);
+
     } else {
         Up9.classList.add("hidden");
     }
@@ -114,7 +107,6 @@ function updateGame(){
         document.getElementById("research-btn").innerText =
             "Research";
         Research.classList.remove("disabled-button");
-        triggerBlink(Research);
     }
     else{
         document.getElementById("research-btn").innerText =
@@ -122,12 +114,10 @@ function updateGame(){
         Research.classList.add("disabled-button");
     }
 //=====(GAME INFO)=====
-    let statsInfo = document.getElementById("statsInfo");
     let SRStatsInfo  = document.getElementById("sr-stats-info");
     if (rebirth >= 40 || SRStatsVis == true) {
         SRStatsVis = true;
         SRStatsInfo.classList.remove("hiddenPlus");
-        triggerBlink(statsInfo);
     } else {
         SRStatsInfo.classList.add("hiddenPlus");
     }
@@ -135,7 +125,7 @@ function updateGame(){
     if (mega >= 1 || meStatsInfoVis == true) {
         SRStatsVis = true;
         MEStatsInfo.classList.remove("hiddenPlus");
-        triggerBlink(statsInfo);
+
     } else {
         MEStatsInfo.classList.add("hiddenPlus");
     }
@@ -157,7 +147,6 @@ function updateGame(){
     if (money >= 5000 || upgradeBlockVis == true) {
         upgradeBlockVis = true;
         upgradesBlock.classList.remove("hiddenPlus");
-        triggerBlink(statsInfo);
     } else {
         upgradesBlock.classList.add("hiddenPlus");
     }
@@ -172,7 +161,6 @@ function updateGame(){
     if (multiplier >= 200 || upgrade3StatsVis == true) {
         upgrade3StatsVis = true;
         upgrade3Info.classList.remove("hiddenPlus");
-        triggerBlink(statsInfo);
     } else {
         upgrade3Info.classList.add("hiddenPlus");
     }
@@ -180,7 +168,6 @@ function updateGame(){
     if (rebirth >= 5 || upgrade4StatsVis == true) {
         upgrade4StatsVis = true;
         upgrade4Info.classList.remove("hiddenPlus");
-        triggerBlink(statsInfo);
     } else {
         upgrade4Info.classList.add("hiddenPlus");
     }
@@ -188,7 +175,6 @@ function updateGame(){
     if (rebirth >= 10 || upgrade5StatsVis == true) {
         upgrade5StatsVis = true;
         upgrade5Info.classList.remove("hiddenPlus");
-        triggerBlink(statsInfo);
     } else {
         upgrade5Info.classList.add("hiddenPlus");
     }
@@ -196,7 +182,6 @@ function updateGame(){
     if (superRebirth >= 1 || upgrade6StatsVis == true) {
         upgrade6StatsVis = true;
         upgrade6Info.classList.remove("hiddenPlus");
-        triggerBlink(statsInfo);
     } else {
         upgrade6Info.classList.add("hiddenPlus");
     }
@@ -204,14 +189,12 @@ function updateGame(){
     if (superRebirth >= 2 || upgrade7StatsVis == true) {
         upgrade7StatsVis = true;
         upgrade7Info.classList.remove("hiddenPlus");
-        triggerBlink(statsInfo);
     } else {
         upgrade7Info.classList.add("hiddenPlus");
     }
     let upgrade8Info  = document.getElementById("upgrade8-info");
     if (superRebirth >= 10 || upgrade8StatsVis == true) {
         upgrade8StatsVis = true;
-        triggerBlink(statsInfo);
         upgrade8Info.classList.remove("hiddenPlus");
     } else {
         upgrade8Info.classList.add("hiddenPlus");
@@ -220,7 +203,6 @@ function updateGame(){
     if (superRebirth >= 50 || upgrade9StatsVis == true) {
         upgrade9StatsVis = true;
         upgrade9Info.classList.remove("hiddenPlus");
-        triggerBlink(statsInfo);
     } else {
         upgrade9Info.classList.add("hiddenPlus");
     }
@@ -228,7 +210,6 @@ function updateGame(){
     if (rebirth >= 40 || SRAlphabetVis == true) {
         SRAlphabetVis = true;
         SRStatsAlphabet.classList.remove("hiddenPlus");
-        triggerBlink(statsInfo);
     } else {
         SRStatsAlphabet.classList.add("hiddenPlus");
     }
@@ -236,7 +217,6 @@ function updateGame(){
     if (mega >= 1 || meStatsInfoVis == true) {
         meStatsInfoVis = true;
         MEStatsAlphabet.classList.remove("hiddenPlus");
-        triggerBlink(statsInfo);
     } else {
         MEStatsAlphabet.classList.add("hiddenPlus");
     }
@@ -261,7 +241,6 @@ function updateGame(){
             if (up9Active === true || researchVis === true) {
                 block.classList.remove("hiddenPlus");
                 researchVis = true;
-                triggerBlink(statsInfo);
             } else {
                 block.classList.add("hiddenPlus");
             }
@@ -270,18 +249,15 @@ function updateGame(){
     //===================
     totalResearchLv = (up1Lv + up2Lv + up3Lv + up4Lv + up5Lv + up6Lv + up7Lv + up8Lv + up9Lv + up10Lv + up11Lv + up12Lv);
     //===================
-    let research = document.getElementById("research");
     let Re2  = document.getElementById("research2-stats");
     if (totalResearchLv >= 2 || up2ReVis == true) {
         Re2.classList.remove("hiddenPlus");
-        triggerBlink(statsInfo);
     } else {
         Re2.classList.add("hiddenPlus");
     }
     let Re3  = document.getElementById("research3-stats");
     if (totalResearchLv >= 5 || up3ReVis == true) {
         Re3.classList.remove("hiddenPlus");
-        triggerBlink(statsInfo);
     } else {
         Re3.classList.add("hiddenPlus");
     }
@@ -290,7 +266,6 @@ function updateGame(){
     if (totalResearchLv >= 11 || up4ReVis == true) {
         Re4.classList.remove("hiddenPlus");
         Re4F.classList.remove("hiddenPlus");
-        triggerBlink(statsInfo);
     } else {
         Re4.classList.add("hiddenPlus");
         Re4F.classList.add("hiddenPlus");
@@ -298,14 +273,12 @@ function updateGame(){
     let Re6  = document.getElementById("research6-stats");
     if (totalResearchLv >= 4 || up6ReVis == true) {
         Re6.classList.remove("hiddenPlus");
-        triggerBlink(statsInfo);
     } else {
         Re6.classList.add("hiddenPlus");
     }
     let Re7  = document.getElementById("research7-stats");
     if (totalResearchLv >= 7 || up7ReVis == true) {
         Re7.classList.remove("hiddenPlus");
-        triggerBlink(statsInfo);
     } else {
         Re7.classList.add("hiddenPlus");
     }
@@ -313,8 +286,7 @@ function updateGame(){
     let Re8F = document.getElementById("research8-formula");
     if (totalResearchLv >= 18 || up8ReVis == true) {
         Re8.classList.remove("hiddenPlus");
-        Re8F.classList.remove("hiddenPlus");
-        triggerBlink(statsInfo);
+        Re8F.classList.remove("hiddenPlus");;
     } else {
         Re8.classList.add("hiddenPlus");
         Re8F.classList.add("hiddenPlus");
@@ -322,14 +294,12 @@ function updateGame(){
     let Re9  = document.getElementById("research9-stats");
     if (totalResearchLv >= 10 || up9ReVis == true) {
         Re9.classList.remove("hiddenPlus");
-        triggerBlink(statsInfo);
     } else {
         Re9.classList.add("hiddenPlus");
     }
     let Re10  = document.getElementById("research10-stats");
     if (totalResearchLv >= 12 || up10ReVis == true) {
         Re10.classList.remove("hiddenPlus");
-        triggerBlink(statsInfo);
     } else {
         Re10.classList.add("hiddenPlus");
     }
@@ -338,7 +308,6 @@ function updateGame(){
     if (totalResearchLv >= 16 || up11ReVis == true) {
         Re11.classList.remove("hiddenPlus");
         Re11F.classList.remove("hiddenPlus");
-        triggerBlink(statsInfo);
     } else {
         Re11.classList.add("hiddenPlus");
         Re11F.classList.add("hiddenPlus");
@@ -346,7 +315,6 @@ function updateGame(){
     let Re12  = document.getElementById("research12-stats");
     if (totalResearchLv >= 400 || up12ReVis == true) {
         Re12.classList.remove("hiddenPlus");
-        triggerBlink(statsInfo);
     } else {
         Re12.classList.add("hiddenPlus");
     }
@@ -355,7 +323,6 @@ function updateGame(){
     if (totalResearchLv >= 2 || up2ReVis == true) {
         up2ReVis = true;
         Up2Re.classList.remove("hidden");
-        triggerBlink(research);
     } else {
         Up2Re.classList.add("hidden");
     }
@@ -363,7 +330,6 @@ function updateGame(){
     if (totalResearchLv >= 5 || up3ReVis == true) {
         up3ReVis = true;
         Up3Re.classList.remove("hidden");
-        triggerBlink(research);
     } else {
         Up3Re.classList.add("hidden");
     }
@@ -372,7 +338,6 @@ function updateGame(){
     if (totalResearchLv >= 11 || up4ReVis == true) {
         up4ReVis = true;
         Up4Re.classList.remove("hidden");
-        triggerBlink(research);
     } else {
         Up4Re.classList.add("hidden");
     }
@@ -380,7 +345,6 @@ function updateGame(){
     if (totalResearchLv >= 4 || up6ReVis == true) {
         up6ReVis = true;
         Up6Re.classList.remove("hidden");
-        triggerBlink(research);
     } else {
         Up6Re.classList.add("hidden");
     }
@@ -388,7 +352,6 @@ function updateGame(){
     if (totalResearchLv >= 7 || up7ReVis == true) {
         up7ReVis = true;
         Up7Re.classList.remove("hidden");
-        triggerBlink(research);
     } else {
         Up7Re.classList.add("hidden");
     }
@@ -396,7 +359,6 @@ function updateGame(){
     if (totalResearchLv >= 18 || up8ReVis == true) {
         up8ReVis = true;
         Up8Re.classList.remove("hidden");
-        triggerBlink(research);
     } else {
         Up8Re.classList.add("hidden");
     }
@@ -404,7 +366,6 @@ function updateGame(){
     if (totalResearchLv >= 10 || up9ReVis == true) {
         up9ReVis = true;
         Up9Re.classList.remove("hidden");
-        triggerBlink(research);
     } else {
         Up9Re.classList.add("hidden");
     }
@@ -412,7 +373,6 @@ function updateGame(){
     if (totalResearchLv >= 12 || up10ReVis == true) {
         up10ReVis = true;
         Up10Re.classList.remove("hidden");
-        triggerBlink(research);
     } else {
         Up10Re.classList.add("hidden");
     }
@@ -420,7 +380,6 @@ function updateGame(){
     if (totalResearchLv >= 16 || up11ReVis == true) {
         up11ReVis = true;
         Up11Re.classList.remove("hidden");
-        triggerBlink(research);
     } else {
         Up11Re.classList.add("hidden");
     }
@@ -428,7 +387,6 @@ function updateGame(){
     if (totalResearchLv >= 400 || up12ReVis == true) {
         up12ReVis = true;
         Up12Re.classList.remove("hidden");
-        triggerBlink(research);
     } else {
         Up12Re.classList.add("hidden");
     }

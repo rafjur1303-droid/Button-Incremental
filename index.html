@@ -18,16 +18,16 @@
 <div id="main-game-layout">
     <div id="content-area">
         <div id="sub-menu-stats" class="sub-menu-bar">
-            <button class="sub-btn active-sub" onclick="changeSubTab('stats', 'stats')">Buttons</button>
+            <button id = "toStats" class="sub-btn active-sub" onclick="changeSubTab('stats', 'stats')">Buttons</button>
             <button id = "toUpgrade" class="sub-btn" onclick="changeSubTab('stats', 'upgrades')">Upgrades</button>
         </div>
         <div id="sub-menu-research" class="sub-menu-bar" style="display: none;">
-            <button class="sub-btn" onclick="changeSubTab('research', 'researchers')">Researchers</button>
+            <button id = "toResearchers" class="sub-btn" onclick="changeSubTab('research', 'researchers')">Researchers</button>
             <button id = "research" class="sub-btn" onclick="changeSubTab('research', 'research')">Research</button>
-            <button class="sub-btn" onclick="changeSubTab('research', 'automation')">Automation</button>
+            <button id = "toAutomation" class="sub-btn" onclick="changeSubTab('research', 'automation')">Automation</button>
         </div>
         <div id="sub-menu-settings" class="sub-menu-bar" style="display: none;">
-            <button class="sub-btn" onclick="changeSubTab('settings', 'settings')">Settings</button>
+            <button id = "toSettings" class="sub-btn" onclick="changeSubTab('settings', 'settings')">Settings</button>
             <button id = "statsInfo" class="sub-btn" onclick="changeSubTab('settings', 'stats-info')">Game Info</button>
         </div>
         <div id="game-play-space">
@@ -239,7 +239,7 @@
                                     <div class="progress-bar-container">
                                         <div class="progress-bar" id="up1-progress"></div>
                                         <span class="progress-text">
-                                            <span id="up1-time-is"></span>s/<span id="up1-time-left"></span>s
+                                            <span id="up1-time-is"></span> s/<span id="up1-time-left"></span> s
                                         </span>
                                     </div>
                                 </button>
@@ -250,7 +250,7 @@
                                     <div class="progress-bar-container">
                                         <div class="progress-bar" id="up2-progress"></div>
                                         <span class="progress-text">
-                                            <span id="up2-time-is"></span>s/<span id="up2-time-left"></span>s
+                                            <span id="up2-time-is"></span> s/<span id="up2-time-left"></span> s
                                         </span>
                                     </div>
                                 </button>
@@ -261,7 +261,7 @@
                                     <div class="progress-bar-container">
                                         <div class="progress-bar" id="up3-progress"></div>
                                         <span class="progress-text">
-                                            <span id="up3-time-is"></span>s/<span id="up3-time-left"></span>s
+                                            <span id="up3-time-is"></span> s/<span id="up3-time-left"></span> s
                                         </span>
                                     </div>
                                 </button>
@@ -272,7 +272,7 @@
                                     <div class="progress-bar-container">
                                         <div class="progress-bar" id="up4-progress"></div>
                                         <span class="progress-text">
-                                            <span id="up4-time-is"></span>s/<span id="up4-time-left"></span>s
+                                            <span id="up4-time-is"></span> s/<span id="up4-time-left"></span> s
                                         </span>
                                     </div>
                                 </button>
@@ -283,7 +283,7 @@
                                     <div class="progress-bar-container">
                                         <div class="progress-bar" id="up5-progress"></div>
                                         <span class="progress-text">
-                                            <span id="up5-time-is"></span>s/<span id="up5-time-left"></span>s
+                                            <span id="up5-time-is"></span> s/<span id="up5-time-left"></span> s
                                         </span>
                                     </div>
                                 </button>
@@ -294,7 +294,7 @@
                                     <div class="progress-bar-container">
                                         <div class="progress-bar" id="up6-progress"></div>
                                         <span class="progress-text">
-                                            <span id="up6-time-is"></span>s/<span id="up6-time-left"></span>s
+                                            <span id="up6-time-is"></span> s/<span id="up6-time-left"></span> s
                                         </span>
                                     </div>
                                 </button>
@@ -305,7 +305,7 @@
                                     <div class="progress-bar-container">
                                         <div class="progress-bar" id="up7-progress"></div>
                                         <span class="progress-text">
-                                            <span id="up7-time-is"></span>s/<span id="up7-time-left"></span>s
+                                            <span id="up7-time-is"></span> s/<span id="up7-time-left"></span> s
                                         </span>
                                     </div>
                                 </button>
@@ -316,7 +316,7 @@
                                     <div class="progress-bar-container">
                                         <div class="progress-bar" id="up8-progress"></div>
                                         <span class="progress-text">
-                                            <span id="up8-time-is"></span>s/<span id="up8-time-left"></span>s
+                                            <span id="up8-time-is"></span> s/<span id="up8-time-left"></span> s
                                         </span>
                                     </div>
                                 </button>
@@ -327,7 +327,7 @@
                                     <div class="progress-bar-container">
                                         <div class="progress-bar" id="up9-progress"></div>
                                         <span class="progress-text">
-                                            <span id="up9-time-is"></span>s/<span id="up9-time-left"></span>s
+                                            <span id="up9-time-is"></span> s/<span id="up9-time-left"></span> s
                                         </span>
                                     </div>
                                 </button>
@@ -338,7 +338,7 @@
                                     <div class="progress-bar-container">
                                         <div class="progress-bar" id="up10-progress"></div>
                                         <span class="progress-text">
-                                            <span id="up10-time-is"></span>s/<span id="up10-time-left"></span>s
+                                            <span id="up10-time-is"></span> s/<span id="up10-time-left"></span> s
                                         </span>
                                     </div>
                                 </button>
@@ -349,7 +349,7 @@
                                     <div class="progress-bar-container">
                                         <div class="progress-bar" id="up11-progress"></div>
                                         <span class="progress-text">
-                                            <span id="up11-time-is"></span>s/<span id="up11-time-left"></span>s
+                                            <span id="up11-time-is"></span> s/<span id="up11-time-left"></span> s
                                         </span>
                                     </div>
                                 </button>
@@ -359,7 +359,7 @@
                                     <div class="progress-bar-container">
                                         <div class="progress-bar" id="up12-progress"></div>
                                         <span class="progress-text">
-                                            <span id="up12-time-is"></span>s/<span id="up12-time-left"></span>s
+                                            <span id="up12-time-is"></span> s/<span id="up12-time-left"></span> s
                                         </span>
                                     </div>
                                 </button>
@@ -508,7 +508,7 @@
                         <button id = "import" class="settings-btn" onclick="importSave()">Import</button>
                         <textarea id="import-input" placeholder="paste import string here"></textarea>
                         <button  class="settings-btn-big" onclick = "resetGame()">RESET</button>
-                        <button  class="settings-btn-big" onclick = "toggleQuestBar()">PROGRESS BAR <span id = "progress-bar-on-off">ON</span></button>
+                        <button  class="settings-btn-big" onclick = "toggleQuestBar()">MILESTONE BAR <span id = "progress-bar-on-off">ON</span></button>
                     </div>
                     <span id="export-alert" class="export-alert-hidden">Save copied to clipboard!</span>
                 </div>
@@ -619,9 +619,9 @@
         </div>
     </div>
     <div id="side-menu">
-        <button class="side-btn active-main" onclick="changeMainTab('stats')">Stats</button>
+        <button class="side-btn active-main" id = "stats-btn" onclick="changeMainTab('stats')">Stats</button>
         <button class="side-btn" id="research-btn" onclick="changeMainTab('research')">Research</button>
-        <button class="side-btn" onclick="changeMainTab('settings')">Settings</button>
+        <button class="side-btn" id = "settings-btn" onclick="changeMainTab('settings')">Settings</button>
     </div>
 </div>
 <div id="quest-container">
@@ -643,5 +643,6 @@
 <script src="JS/research.js"></script>
 <script src="JS/automation.js"></script>
 <script src="JS/gameProgresBar.js"></script>
+<script src="JS/kropka.js"></script>
 </body>
 </html>

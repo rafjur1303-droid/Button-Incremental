@@ -56,11 +56,19 @@ function upgrade1Research() {
             up1Researchers += researchersSpending;
             currentResearchers += Math.abs(researchersSpending);
         }
+        else if(Math.abs(researchersSpending) > up1Researchers) {
+            currentResearchers += up1Researchers;
+            up1Researchers = 0;
+        }
     }
     else if (researchersSpending > 0) {
         if (researchersSpending <= currentResearchers) {
             up1Researchers += researchersSpending;
             currentResearchers -= researchersSpending;
+        }
+        else if(researchersSpending > currentResearchers) {
+            up1Researchers += currentResearchers;
+            currentResearchers -= currentResearchers;
         }
     }
 }
@@ -84,12 +92,17 @@ function upgrade2Research() {
         if (Math.abs(researchersSpending) <= up2Researchers) {
             up2Researchers += researchersSpending;
             currentResearchers += Math.abs(researchersSpending);
+        } else if (Math.abs(researchersSpending) > up2Researchers) {
+            currentResearchers += up2Researchers;
+            up2Researchers = 0;
         }
-    }
-    else if (researchersSpending > 0) {
+    } else if (researchersSpending > 0) {
         if (researchersSpending <= currentResearchers) {
             up2Researchers += researchersSpending;
             currentResearchers -= researchersSpending;
+        } else if (researchersSpending > currentResearchers) {
+            up2Researchers += currentResearchers;
+            currentResearchers -= currentResearchers;
         }
     }
 }
@@ -116,12 +129,17 @@ function upgrade3Research() {
         if (Math.abs(researchersSpending) <= up3Researchers) {
             up3Researchers += researchersSpending;
             currentResearchers += Math.abs(researchersSpending);
+        } else if (Math.abs(researchersSpending) > up3Researchers) {
+            currentResearchers += up3Researchers;
+            up3Researchers = 0;
         }
-    }
-    else if (researchersSpending > 0) {
+    } else if (researchersSpending > 0) {
         if (researchersSpending <= currentResearchers) {
             up3Researchers += researchersSpending;
             currentResearchers -= researchersSpending;
+        } else if (researchersSpending > currentResearchers) {
+            up3Researchers += currentResearchers;
+            currentResearchers -= currentResearchers;
         }
     }
 }
@@ -145,12 +163,17 @@ function upgrade4Research() {
         if (Math.abs(researchersSpending) <= up4Researchers) {
             up4Researchers += researchersSpending;
             currentResearchers += Math.abs(researchersSpending);
+        } else if (Math.abs(researchersSpending) > up4Researchers) {
+            currentResearchers += up4Researchers;
+            up4Researchers = 0;
         }
-    }
-    else if (researchersSpending > 0) {
+    } else if (researchersSpending > 0) {
         if (researchersSpending <= currentResearchers) {
             up4Researchers += researchersSpending;
             currentResearchers -= researchersSpending;
+        } else if (researchersSpending > currentResearchers) {
+            up4Researchers += currentResearchers;
+            currentResearchers -= currentResearchers;
         }
     }
 }
@@ -175,11 +198,19 @@ function upgrade5Research() {
             up5Researchers += researchersSpending;
             currentResearchers += Math.abs(researchersSpending);
         }
+        else if(Math.abs(researchersSpending) > up5Researchers) {
+            currentResearchers += up5Researchers;
+            up5Researchers = 0;
+        }
     }
     else if (researchersSpending > 0) {
         if (researchersSpending <= currentResearchers) {
             up5Researchers += researchersSpending;
             currentResearchers -= researchersSpending;
+        }
+        else if(researchersSpending > currentResearchers) {
+                up5Researchers += currentResearchers;
+                currentResearchers -= currentResearchers;
         }
     }
 }
@@ -226,11 +257,19 @@ function upgrade6Research() {
             up6Researchers += researchersSpending;
             currentResearchers += Math.abs(researchersSpending);
         }
+        else if(Math.abs(researchersSpending) > up6Researchers) {
+            currentResearchers += up6Researchers;
+            up6Researchers = 0;
+        }
     }
     else if (researchersSpending > 0) {
         if (researchersSpending <= currentResearchers) {
             up6Researchers += researchersSpending;
             currentResearchers -= researchersSpending;
+        }
+        else if(researchersSpending > currentResearchers) {
+            up6Researchers += currentResearchers;
+            currentResearchers -= currentResearchers;
         }
     }
 }
@@ -243,7 +282,7 @@ function upgrade6Active() {
             if (up6Lv >= 30){
                 researchSpeedUpgradesMulti *= 1.1;
                 up6BoostRe *= 1.1;
-                up6TimeLeft *= (up6Scale + 0.3);
+                up6TimeLeft *= (up6Scale + 0.5);
             }
             else{
                 researchSpeedUpgradesMulti *= 1.2;
@@ -262,11 +301,19 @@ function upgrade7Research() {
             up7Researchers += researchersSpending;
             currentResearchers += Math.abs(researchersSpending);
         }
+        else if(Math.abs(researchersSpending) > up7Researchers) {
+            currentResearchers += up7Researchers;
+            up7Researchers = 0;
+        }
     }
     else if (researchersSpending > 0) {
         if (researchersSpending <= currentResearchers) {
             up7Researchers += researchersSpending;
             currentResearchers -= researchersSpending;
+        }
+        else if(researchersSpending > currentResearchers) {
+            up7Researchers += currentResearchers;
+            currentResearchers -= currentResearchers;
         }
     }
 }
@@ -292,11 +339,19 @@ function upgrade8Research() {
             up8Researchers += researchersSpending;
             currentResearchers += Math.abs(researchersSpending);
         }
+        else if(Math.abs(researchersSpending) > up8Researchers) {
+            currentResearchers += up8Researchers;
+            up8Researchers = 0;
+        }
     }
     else if (researchersSpending > 0) {
         if (researchersSpending <= currentResearchers) {
             up8Researchers += researchersSpending;
             currentResearchers -= researchersSpending;
+        }
+        else if(researchersSpending > currentResearchers) {
+            up8Researchers += currentResearchers;
+            currentResearchers -= currentResearchers;
         }
     }
 }
@@ -321,11 +376,19 @@ function upgrade9Research() {
             up9Researchers += researchersSpending;
             currentResearchers += Math.abs(researchersSpending);
         }
+        else if(Math.abs(researchersSpending) > up9Researchers) {
+            currentResearchers += up9Researchers;
+            up9Researchers = 0;
+        }
     }
     else if (researchersSpending > 0) {
         if (researchersSpending <= currentResearchers) {
             up9Researchers += researchersSpending;
             currentResearchers -= researchersSpending;
+        }
+        else if(researchersSpending > currentResearchers) {
+            up9Researchers += currentResearchers;
+            currentResearchers -= currentResearchers;
         }
     }
 }
@@ -350,11 +413,19 @@ function upgrade10Research() {
             up10Researchers += researchersSpending;
             currentResearchers += Math.abs(researchersSpending);
         }
+        else if(Math.abs(researchersSpending) > up10Researchers) {
+            currentResearchers += up10Researchers;
+            up10Researchers = 0;
+        }
     }
     else if (researchersSpending > 0) {
         if (researchersSpending <= currentResearchers) {
             up10Researchers += researchersSpending;
             currentResearchers -= researchersSpending;
+        }
+        else if(researchersSpending > currentResearchers) {
+            up10Researchers += currentResearchers;
+            currentResearchers -= currentResearchers;
         }
     }
 }
@@ -379,11 +450,19 @@ function upgrade11Research() {
             up11Researchers += researchersSpending;
             currentResearchers += Math.abs(researchersSpending);
         }
+        else if(Math.abs(researchersSpending) > up11Researchers) {
+            currentResearchers += up11Researchers;
+            up11Researchers = 0;
+        }
     }
     else if (researchersSpending > 0) {
         if (researchersSpending <= currentResearchers) {
             up11Researchers += researchersSpending;
             currentResearchers -= researchersSpending;
+        }
+        else if(researchersSpending > currentResearchers) {
+            up11Researchers += currentResearchers;
+            currentResearchers -= currentResearchers;
         }
     }
 }
@@ -408,11 +487,19 @@ function upgrade12Research() {
                 up12Researchers += researchersSpending;
                 currentResearchers += Math.abs(researchersSpending);
             }
+            else if(Math.abs(researchersSpending) > up12Researchers) {
+                currentResearchers += up12Researchers;
+                up12Researchers = 0;
+            }
         }
         else if (researchersSpending > 0) {
             if (researchersSpending <= currentResearchers) {
                 up12Researchers += researchersSpending;
                 currentResearchers -= researchersSpending;
+            }
+            else if(researchersSpending > currentResearchers) {
+                up12Researchers += currentResearchers;
+                currentResearchers -= currentResearchers;
             }
         }
     }

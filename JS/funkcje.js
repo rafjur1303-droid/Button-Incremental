@@ -210,6 +210,27 @@ function saveGame() {
         MeVis : MeVis,
         rebirthAutomationVis : rebirthAutomationVis,
         superRebirthAutomationVis : superRebirthAutomationVis,
+        upgradeUnlocked : upgradeUnlocked,
+        superRebirthUnlocked : superRebirthUnlocked,
+        megaUnlocked : megaUnlocked,
+        up3Unlocked : up3Unlocked,
+        up4Unlocked : up4Unlocked,
+        up5Unlocked : up5Unlocked,
+        up6Unlocked : up6Unlocked,
+        up7Unlocked : up7Unlocked,
+        up8Unlocked : up8Unlocked,
+        up9Unlocked : up9Unlocked,
+        researchUnlocked : researchUnlocked,
+        re2Unlocked : re2Unlocked,
+        re3Unlocked : re3Unlocked,
+        re4Unlocked : re4Unlocked,
+        re6Unlocked : re6Unlocked,
+        re7Unlocked : re7Unlocked,
+        re8Unlocked : re8Unlocked,
+        re9Unlocked : re9Unlocked,
+        re10Unlocked : re10Unlocked,
+        re11Unlocked : re11Unlocked,
+        re12Unlocked : re12Unlocked,
     };
     localStorage.setItem("mojaGraSave", JSON.stringify(save));
     console.log("Gra zapisana!");
@@ -444,7 +465,27 @@ function loadGame() {
             MeVis = decodedSave.MeVis;
             rebirthAutomationVis = decodedSave.rebirthAutomationVis;
             superRebirthAutomationVis = decodedSave.superRebirthAutomationVis;
-
+            upgradeUnlocked  = decodedSave.upgradeUnlocked;
+            superRebirthUnlocked = decodedSave.superRebirthUnlocked;
+            megaUnlocked = decodedSave.megaUnlocked;
+            up3Unlocked = decodedSave.up3Unlocked;
+            up4Unlocked = decodedSave.up4Unlocked;
+            up5Unlocked = decodedSave.up5Unlocked;
+            up6Unlocked = decodedSave.up6Unlocked;
+            up7Unlocked = decodedSave.up7Unlocked;
+            up8Unlocked = decodedSave.up8Unlocked;
+            up9Unlocked = decodedSave.up9Unlocked;
+            researchUnlocked = decodedSave.researchUnlocked;
+            re2Unlocked = decodedSave.re2Unlocked;
+            re3Unlocked = decodedSave.re3Unlocked;
+            re4Unlocked = decodedSave.re4Unlocked;
+            re6Unlocked = decodedSave.re6Unlocked;
+            re7Unlocked = decodedSave.re7Unlocked;
+            re8Unlocked = decodedSave.re8Unlocked;
+            re9Unlocked = decodedSave.re9Unlocked;
+            re10Unlocked = decodedSave.re10Unlocked;
+            re11Unlocked = decodedSave.re11Unlocked;
+            re12Unlocked = decodedSave.re12Unlocked;
             console.log("Gra wczytana poprawnie!");
         } catch (e) {
             console.error("Błąd dekodowania zapisu, tworzę nowy...", e);
@@ -461,6 +502,30 @@ function admin(){
     rebirth = 1000000000000000000000000000000;
     superRebirth = 1000000000000000000000000000000;
     mega = 1000000000000000000000000000000;
+}
+//=====(POWIADOMIENIA , KROPKA)=====
+function showNotification(buttonId, panelId) {
+    let btn = document.getElementById(buttonId);
+    let panel = document.getElementById(panelId);
+    if (!btn || !panel) return;
+    let isCurrentPanelOpen = (panel.style.display !== "none" && panel.style.visibility !== "hidden");
+    if (!isCurrentPanelOpen) {
+        btn.classList.add("has-notification");
+        btn.addEventListener("click", function() {
+            btn.classList.remove("has-notification");
+        }, { once: true });
+    }
+}
+function allNotification(buttonId) {
+    let btn = document.getElementById(buttonId);
+    if (btn) {
+        btn.classList.add("has-notification");
+        btn.addEventListener("click", function() {
+            btn.classList.remove("has-notification");
+        }, { once: true });
+    } else {
+        console.warn("Nie znaleziono przycisku o ID: " + buttonId);
+    }
 }
 //=====(HARD RESET)=====
 function resetGame() {
@@ -685,7 +750,27 @@ function initFreshSave() {
     superRebirthTimeTimeLeft = 920;
     superRebirthGainLv = 0;
     superRebirthTimeLv = 0;
-
+    upgradeUnlocked = false;
+    superRebirthUnlocked = false;
+    megaUnlocked = false;
+    up3Unlocked = false;
+    up4Unlocked = false;
+    up5Unlocked = false;
+    up6Unlocked = false;
+    up7Unlocked = false;
+    up8Unlocked = false;
+    up9Unlocked = false;
+    researchUnlocked = false;
+    re2Unlocked = false;
+    re3Unlocked = false;
+    re4Unlocked = false;
+    re6Unlocked = false;
+    re7Unlocked = false;
+    re8Unlocked = false;
+    re9Unlocked = false;
+    re10Unlocked = false;
+    re11Unlocked = false;
+    re12Unlocked = false;
 }
 //=====(EXPORT)=====
 function exportSave() {
@@ -889,9 +974,10 @@ setInterval(() => {
 setInterval(() => {
     saveGame();
 }, 5000);
-//=====(UPDATE EKRANU)=====
+//=====(UPDATE EKRANU + KROPKA)=====
 setInterval(() => {
     updateGame();
+    Notification();
 }, 250);
 //=====(WCZYTYWANIE GRY)=====
 window.onload = function() {

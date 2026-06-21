@@ -218,3 +218,34 @@ body {
     width: 100%;
     font-size: 1.5vw;
 }
+button, .menu-btn {
+    position: relative;
+}
+.has-notification::after {
+    content: "!";
+    position: absolute;
+    top: -1vh;
+    right: -0.8vw;
+    background-color: #ff4d4d;
+    color: #000000;
+    border: solid #000000 0.1vw;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    font-size: 1vw;
+    width: 1.2vw;
+    height: 1.2vw;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 0.3vw rgba(0, 0, 0, 0.3);
+    z-index: 10;
+}
+.blink-notification {
+    animation: blink-animation 0.5s ease-in-out 2;
+}
+@keyframes blink-animation {
+    0% { background-color: transparent; }
+    50% { background-color: #00ccff; box-shadow: 0 0 0.6vw #00ccff; }
+    100% { background-color: transparent; }
+}
